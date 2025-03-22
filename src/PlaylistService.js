@@ -33,10 +33,11 @@ class PlaylistService {
     const songs = songsResult.rows;
 
     return {
-      id: playlistInfo.id,
-      name: playlistInfo.name,
-      username: playlistInfo.username,
-      songs,
+      playlist: {
+        id: playlistInfo.id,
+        name: playlistInfo.name,
+        songs,
+      },
     };
   }
 }
